@@ -1,0 +1,14 @@
+service: python-youtube
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  hello:
+    handler: handler.dayLaTenHam
+    events:
+      - httpApi:
+          path: /
+          method: get
