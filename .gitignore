@@ -18,3 +18,13 @@ var/
 
 # Serverless directories
 .serverless
+
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# esbuild directories
+.esbuild

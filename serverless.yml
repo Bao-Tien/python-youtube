@@ -1,14 +1,17 @@
 service: python-youtube
 frameworkVersion: "3"
+plugins:
+  - serverless-python-requirements
 
 provider:
   name: aws
+  region: ap-southeast-1
   runtime: python3.8
 
 functions:
-  hello:
-    handler: handler.dayLaTenHam
-    events:
-      - httpApi:
-          path: /
-          method: get
+  youtubeGetVideos:
+    handler: handler.lambdaFunction
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
