@@ -10,7 +10,11 @@ provider:
 
 functions:
   youtubeGetVideos:
-    handler: handler.lambdaFunction
+    handler: getVideos.lambdaFunction
+  youtubeGetVideoInfo:
+    handler: getVideoInfo.lambdaFunction
+  youtubeGetVideoCaption:
+    handler: getVideoCaption.lambdaFunction
 
 custom:
   pythonRequirements:
